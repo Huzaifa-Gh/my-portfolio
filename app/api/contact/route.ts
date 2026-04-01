@@ -8,7 +8,6 @@ export async function POST(req: Request) {
     });
   }
 
-  // configure this according to your google form
   const fieldIdName = process.env.GOOGLE_FORM_FIELD_ID_NAME;
   const fieldIdEmail = process.env.GOOGLE_FORM_FIELD_ID_EMAIL;
   const fieldIdMessage = process.env.GOOGLE_FORM_FIELD_ID_MESSAGE;
@@ -18,9 +17,21 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { name, message, social, email } = body;
 
-    const res = await fetch(
-      `${formLink}/formResponse?${fieldIdName}=${name}&${fieldIdEmail}=${email}&${fieldIdMessage}=${message}&${fieldIdSocial}=${social}`
-    );
+    const formData = new URLSearchParams();
+    formData.append(fieldIdName!, name);
+    formData.append(fieldIdEmail!, email);
+    formData.append(fieldIdMessage!, message);
+    formData.append(fieldIdSocial!, social || "");
+
+    await fetch(`${formLink}/formResponse`, {
+      method: "POST",
+      body: formData.toString(),
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "User-Agent":
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      },
+    });
 
     return NextResponse.json("Success!");
   } catch (error) {

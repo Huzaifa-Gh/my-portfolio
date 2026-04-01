@@ -47,24 +47,50 @@ export function ContactForm() {
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
+      const formLink =
+        "https://docs.google.com/forms/d/e/1FAIpQLSdSo_VV1iWgj9cImCoR7xCum1OXpJJ_ePJ7Ef2uu8361pYF4Q/formResponse";
+
+      const fields: Record<string, string> = {
+        "entry.2005620554": values.name,
+        "entry.1045781291": values.email,
+        "entry.1065046570": values.message,
+        "entry.1166974658": values.social || "",
+      };
+
+      const iframe = document.createElement("iframe");
+      iframe.style.display = "none";
+      iframe.name = "gform_iframe";
+      document.body.appendChild(iframe);
+
+      const formEl = document.createElement("form");
+      formEl.method = "POST";
+      formEl.action = formLink;
+      formEl.target = "gform_iframe";
+
+      Object.entries(fields).forEach(([key, val]) => {
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = key;
+        input.value = val;
+        formEl.appendChild(input);
       });
+
+      document.body.appendChild(formEl);
+      formEl.submit();
+
+      setTimeout(() => {
+        document.body.removeChild(formEl);
+        document.body.removeChild(iframe);
+      }, 2000);
 
       form.reset();
 
-      if (response.status === 200) {
-        storeModal.onOpen({
-          title: "Thankyou!",
-          description:
-            "Your message has been received! I appreciate your contact and will get back to you shortly.",
-          icon: Icons.successAnimated,
-        });
-      }
+      storeModal.onOpen({
+        title: "Thankyou!",
+        description:
+          "Your message has been received! I appreciate your contact and will get back to you shortly.",
+        icon: Icons.successAnimated,
+      });
     } catch (err) {
       console.log("Err!", err);
     }

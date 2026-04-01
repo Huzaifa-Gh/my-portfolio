@@ -12,7 +12,17 @@ Personal portfolio website built with Next.js 16, React 19, TypeScript, and Tail
 
 ```bash
 npm install
-cp .env.copy .env  # fill in your env values
+```
+
+Copy `.env.copy` to `.env` and fill in your environment variables:
+
+```bash
+cp .env.copy .env
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
