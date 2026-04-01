@@ -1,19 +1,16 @@
 # Portfolio Website Navigation Overview
 
-This document outlines the navigation structure of the portfolio website [https://nbarkiya.xyz/](https://nbarkiya.xyz/), detailing each page and its primary sections to facilitate understanding and interaction.
+This document outlines the navigation structure of the portfolio website [https://huzaifa-ghumman.vercel.app](https://huzaifa-ghumman.vercel.app).
 
 ---
 
 ## Main Navigation Menu
 
-The website's main navigation menu is accessible from all pages and includes the following links:
-
-1. **Home**: [https://nbarkiya.xyz/](https://nbarkiya.xyz/)
-2. **Skills**: [https://nbarkiya.xyz/skills](https://nbarkiya.xyz/skills)
-3. **Projects**: [https://nbarkiya.xyz/projects](https://nbarkiya.xyz/projects)
-4. **Experience**: [https://nbarkiya.xyz/experience](https://nbarkiya.xyz/experience)
-5. **Contributions**: [https://nbarkiya.xyz/contributions](https://nbarkiya.xyz/contributions)
-6. **Contact**: [https://nbarkiya.xyz/contact](https://nbarkiya.xyz/contact)
+1. **Home**: [/](https://huzaifa-ghumman.vercel.app/)
+2. **Projects**: [/projects](https://huzaifa-ghumman.vercel.app/projects)
+3. **Experience**: [/experience](https://huzaifa-ghumman.vercel.app/experience)
+4. **Skills**: [/skills](https://huzaifa-ghumman.vercel.app/skills)
+5. **Contact**: [/contact](https://huzaifa-ghumman.vercel.app/contact)
 
 ---
 
@@ -21,60 +18,44 @@ The website's main navigation menu is accessible from all pages and includes the
 
 ### 1. Home
 
-**URL:** [https://nbarkiya.xyz/](https://nbarkiya.xyz/)
+**Sections:**
+
+- **Introduction**: Profile image, name (Huzaifa Ghumman), and role (Full Stack Developer).
+- **Projects Highlights**: Top 3 projects with links to detailed descriptions.
+- **Experience Highlights**: Professional work experience cards.
+- **Skills Overview**: Key skills with ratings and a prompt to view all.
+
+### 2. Projects
 
 **Sections:**
 
-- **Introduction**: Presents the individual's name and role (e.g., "Full Stack Developer").
-- **Skills Overview**: Highlights key skills with a prompt to view all skills.
-- **Projects Highlights**: Summarizes notable technical projects with links to detailed descriptions.
-- **Experience Highlights**: Summarizes professional work experience with links to detailed descriptions.
-- **Contributions Summary**: Lists recent open-source contributions with links for more information.
+- **Technical Projects**: Project cards with descriptions, tech stack, categories, and links.
+- **Projects**: Five Star AI, Inkfinity Creation, First Signal, Layout IQ.
 
-### 2. Skills
-
-**URL:** [https://nbarkiya.xyz/skills](https://nbarkiya.xyz/skills)
+### 3. Experience
 
 **Sections:**
 
-- **Technical Skills**: Enumerates various technologies and tools, each accompanied by a brief description.
+- **Professional Experience**: Timeline with company logos, roles, dates, and achievements.
+- **Positions**: Consolices (Associate Software Engineer), Patronecs (Software Engineering Intern).
 
-### 3. Projects
-
-**URL:** [https://nbarkiya.xyz/projects](https://nbarkiya.xyz/projects)
-
-**Sections:**
-
-- **Technical Projects**: Details technical projects with descriptions, technologies used, and links to read more.
-
-### 4. Experience
-
-**URL:** [https://nbarkiya.xyz/experience](https://nbarkiya.xyz/experience)
+### 4. Skills
 
 **Sections:**
 
-- **Professional Experience**: Details work experience with company information, roles, and achievements.
+- **Technical Skills**: Skills with descriptions and ratings (1-5).
 
-### 5. Contributions
-
-**URL:** [https://nbarkiya.xyz/contributions](https://nbarkiya.xyz/contributions)
+### 5. Contact
 
 **Sections:**
 
-- **Open-Source Contributions**: Lists contributions with descriptions and links to the respective repositories.
-
-### 6. Contact
-
-**URL:** [https://nbarkiya.xyz/contact](https://nbarkiya.xyz/contact)
-
-**Sections:**
-
-- **Contact Form**: Fields for name, email, message, and optional social links.
-- **GitHub Link**: Provides a link to the source code of the website's template.
+- **Contact Info**: Email, WhatsApp, LinkedIn, and GitHub links.
+- **GitHub Credit**: Link to the original open-source template.
 
 ---
 
 ## Additional Features
 
-- **Theme Toggle**: Allows users to switch between light and dark themes.
-- **Responsive Design**: Ensures optimal viewing across various devices.
+- **Theme Toggle**: 7 themes — Light, Dark, Retro, Cyberpunk, Paper, Aurora, Synthwave.
+- **Responsive Design**: Optimized for mobile, tablet, and desktop.
+- **Animations**: Scroll and text animations via Framer Motion.

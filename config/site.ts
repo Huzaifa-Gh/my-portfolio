@@ -4,7 +4,7 @@ export const siteConfig = {
   username: "Huzaifa-Gh",
   description:
     "Huzaifa Ghumman - Full Stack Developer. Explore my projects, experience, and contributions in software development.",
-  url: "https://huzaifaghumman.vercel.app",
+  url: "https://huzaifa-ghumman.vercel.app",
   links: {
     github: "https://github.com/Huzaifa-Gh",
     templateRepo: "https://github.com/namanbarkiya/minimal-next-portfolio",
